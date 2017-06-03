@@ -1,0 +1,36 @@
+
+
+//#include "stdafx.h"
+#include "Stack.h"
+
+///////////////////////////////////////////////////////////////////////
+//!  Parameters: a generic variable name which becomes the data of a 
+//!	 list in FILO format
+//
+//!  pushes a parameter onto a List which is FILO aka a stack
+///////////////////////////////////////////////////////////////////////
+template <class T>
+void Stack<T>::push(T name) {
+	this->List<T>::addLast(name);
+}
+
+///////////////////////////////////////////////////////////////////////
+//!  Parameters: NONE
+//
+//!  pops a node from the top of the list, NULL if empty
+///////////////////////////////////////////////////////////////////////
+template <class T>
+T Stack<T>::pop() {
+	return this->List<T>::removeLast();
+}
+
+///////////////////////////////////////////////////////////////////////
+//!  Parameters: NONE
+//
+//!  Prints the stack commented shows the top of the stack
+///////////////////////////////////////////////////////////////////////
+template <class T>
+void Stack<T>::print() const {
+	this->List<T>::print();
+	//cout << " TOP";
+}
